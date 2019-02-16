@@ -1,3 +1,14 @@
-# source code of hewlik.de
+# Repo of my [personal website](https://hewlik.de)
 
-## TODO: write readme
+Local development enviorment
+## Usage
+
+### Installation
+Install dependencies ``` $ npm install ```
+
+### Run
+Start filewatcher, compiler, prefixer, minifier, concat & server ``` $ npm start ```
+
+Server running at http://localhost:3000
+
+*production files located in dist folder*
