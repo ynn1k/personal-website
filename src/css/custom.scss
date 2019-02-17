@@ -1,0 +1,80 @@
+$primary-color1: #DE3940;
+
+body {
+    background-image: url("img/background.png");
+    font-family: 'Ubuntu Mono', monospace;
+
+    .logo {
+        display: flex;
+        margin: 120px auto;
+        height: 120px;
+        width: auto;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0;
+        color: #fff;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .intro {
+        width: 360px;
+        display: flex;
+        margin: auto;
+        flex-flow: column;
+
+        p {
+            text-align: justify;
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+
+            .email {
+                font-family: "Comic Sans MS", cursive;
+                color: $primary-color1;
+                margin: 40px 0;
+            }
+
+            div {
+                line-height: 0;
+
+                a {
+                    margin-right: 40px;
+
+                    &:hover {
+                        svg path {
+                            fill: $primary-color1;
+                        }
+                    }
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        right: 80px;
+        bottom: 80px;
+        position: absolute;
+
+        a {
+            color: rgba(#fff, .5);
+        }
+    }
+}
