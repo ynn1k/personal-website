@@ -46,13 +46,20 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest('./dist/'));
 });
 
+// copy images
+gulp.task("img", function () {
+    return gulp.src("./src/img/*.*")
+        .pipe(gulp.dest("./dist/img"))
+        .pipe(browserSync.stream());
+});
+
 // watch & serve
-gulp.task("serve", gulp.series(["sass", "scripts", "html"], function () {
+gulp.task("serve", gulp.series(["sass", "scripts", "html", "img"], function () {
     browserSync.init({
         server: "./dist"
     });
 
-    gulp.watch(["./src/css/*.scss", "./src/js/*.js", "./src/*.html"], gulp.series(["sass", "scripts", "html"]));
+    gulp.watch(["./src/css/*.scss", "./src/js/*.js", "./src/*.html", "./src/img/*.*"], gulp.series(["sass", "scripts", "html", "img"]));
 }));
 
 // default task
