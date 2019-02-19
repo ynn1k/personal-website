@@ -19,7 +19,7 @@ gulp.task("html", function () {
             removeComments: true,
             useShortDoctype: true
         }))
-        .pipe(gulp.dest("./dist"))
+        .pipe(gulp.dest("./docs"))
         .pipe(browserSync.stream());
 });
 
@@ -34,7 +34,7 @@ gulp.task("sass", function () {
         }))
         .pipe(rename({ basename: "style", suffix: '.min' }))
         .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest("./dist"));
+        .pipe(gulp.dest("./docs"));
 });
 
 // js minify & merge
@@ -43,20 +43,20 @@ gulp.task('scripts', function () {
         .pipe(concat("script.js"))
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('./docs/'));
 });
 
 // copy images
 gulp.task("img", function () {
     return gulp.src("./src/img/*.*")
-        .pipe(gulp.dest("./dist/img"))
+        .pipe(gulp.dest("./docs/img"))
         .pipe(browserSync.stream());
 });
 
 // watch & serve
 gulp.task("serve", gulp.series(["sass", "scripts", "html", "img"], function () {
     browserSync.init({
-        server: "./dist"
+        server: "./docs"
     });
 
     gulp.watch(["./src/css/*.scss", "./src/js/*.js", "./src/*.html", "./src/img/*.*"], gulp.series(["sass", "scripts", "html", "img"]));

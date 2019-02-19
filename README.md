@@ -11,4 +11,4 @@ Start filewatcher, compiler, prefixer, minifier, concat & server ``` $ npm start
 
 Server running at http://localhost:3000
 
-*production files located in dist folder*
+*production files located in docs folder*
