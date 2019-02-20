@@ -15,7 +15,7 @@ gulp.task("html", function () {
             caseSensitive: true,
             collapseWhitespace: true,
             collapseInlineTagWhitespace: true,
-            decodeEntities: true,
+            decodeEntities: false,
             removeComments: true,
             useShortDoctype: true
         }))
