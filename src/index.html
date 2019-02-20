@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description"
+        content="Eine neue Webseite oder ein neues Logo soll her? Es soll aber keine schlechte 0815 Lösung sein? Gestaltung und Programmierung weit über dem Standart!">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <title>👋 Yannik Hewlik</title>
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/logo.png">
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
     <link rel="stylesheet" href="style.min.css">
@@ -14,7 +22,7 @@
 
 <body>
     <img src="img/logo.png" alt="logo" class="logo">
-    <section class="intro">
+    <main class="intro">
         <p>
             Hi, Ich bin Yannik, komme aus Dinslaken und bin hauptberuflicher Mediengestalter mit Schwerpunkt auf
             Webentwicklung… Und da mir wirklich gefällt was Ich mache, bin Ich auch nebenberuflich als Designer &
@@ -23,9 +31,10 @@
             einzuordnen ist, sollten wir Kontakt aufnehmen:
         </p>
         <div class="links">
-            <a href="mailto:yannik@hewlik.de" class="email">yannik@hewlik.de</a>
+            <a href="mailto:yannik@hewlik.de?subject=Verfügbarkeitsanfrage&body=Hi%20Yannik,%20ich%20war%20gerade%20auf%20deiner%20Webseite%20und%20habe%20mich%20gefragt%20ob%20du%20…"
+                class="email">yannik@hewlik.de</a>
             <div>
-                <a href="https://www.behance.net/yannikhewlik" target="_blank">
+                <a href="https://www.behance.net/yannikhewlik" target="_blank" rel="noopener">
                     <svg width="32px" height="32px" aria-hidden="true" focusable="false" data-prefix="fab"
                         data-icon="behance-square" class="svg-inline--fa fa-behance-square fa-w-14" role="img"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -34,7 +43,7 @@
                         </path>
                     </svg>
                 </a>
-                <a href="https://twitter.com/ynn1k" target="_blank">
+                <a href="https://twitter.com/ynn1k" target="_blank" rel="noopener">
                     <svg width="32px" height="32px" aria-hidden="true" focusable="false" data-prefix="fab"
                         data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -43,7 +52,7 @@
                         </path>
                     </svg>
                 </a>
-                <a href="https://github.com/ynn1k" target="_blank">
+                <a href="https://github.com/ynn1k" target="_blank" rel="noopener">
                     <svg width="32px" height="32px" aria-hidden="true" focusable="false" data-prefix="fab"
                         data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
@@ -54,10 +63,11 @@
                 </a>
             </div>
         </div>
-    </section>
+        <img src="img/yannik-being-so-real.png" alt="Das bin Ich" title="Ja, das bin ich :)">
+    </main>
 
     <footer>
-        <a href="https://to-the-muun.de" target="_blank">https://to-the-muun.de</a>
+        <a href="https://to-the-muun.de" target="_blank" rel="noopener">https://to-the-muun.de</a>
     </footer>
     <script src="script.min.js"></script>
 </body>
