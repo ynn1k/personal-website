@@ -1,6 +1,11 @@
 $primary-color1: #DE3940;
 
 body {
+    min-height: calc(100vh - 120px);
+    margin: 0;
+    padding-top: 120px;
+    padding-bottom: 40px;
+    position: relative;
     background-image: url("img/background.png");
     font-family: 'Ubuntu Mono', monospace;
     font-display: auto;
@@ -8,6 +13,7 @@ body {
     .logo {
         display: flex;
         margin: 120px auto;
+        margin-top: 0;
         height: 180px;
         width: auto;
 
@@ -111,8 +117,8 @@ body {
     }
 
     footer {
-        right: 80px;
-        bottom: 80px;
+        right: 40px;
+        bottom: 40px;
         position: absolute;
 
         a {
@@ -123,7 +129,6 @@ body {
             position: static;
             display: flex;
             margin-top: 80px;
-            margin-bottom: 40px;
             justify-content: center;
         }
     }
