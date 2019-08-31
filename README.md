@@ -1,14 +1,14 @@
-# Repo of my [personal website](https://hewlik.de)
+# Repository of my [personal website](https://hewlik.de)
 
-Local development enviorment
-## Usage
+This Project is and will always be work in progress 🙂
 
-### Installation
-Install dependencies ``` $ npm install ```
+<a href="https://twitter.com/ynn1k" target="_blank">
+<img src="https://img.shields.io/twitter/follow/ynn1k?label=%40ynn1k&style=social">
+</a>
 
-### Run
-Start filewatcher, compiler, prefixer, minifier, concat & server ``` $ npm start ```
+## Local development enviorment
 
-Server running at http://localhost:3000
+* Install dependencies ``` $ npm install ```
+* Start filewatcher, compiler, prefixer, minifier, concat & server ``` $ npm start ```
 
-*production files located in docs folder*
+*Server running at http://localhost:3000. Production files located in docs folder*
