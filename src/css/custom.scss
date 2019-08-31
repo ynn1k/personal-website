@@ -20,6 +20,10 @@ body {
         margin-top: 0;
         height: 180px;
         width: auto;
+        filter: drop-shadow(0px 0px 8px #DE3940);
+        opacity: 0;
+        animation: fadein 1s forwards;
+        animation-delay: 1s;
 
         @media(max-width: 992px){
             margin: 28px auto;
@@ -32,6 +36,8 @@ body {
         line-height: 28px;
         margin: 0;
         color: #fff;
+        opacity: 0;
+        animation: fadein 1s forwards;
     }
 
     a {
@@ -52,6 +58,9 @@ body {
         picture {
             position:absolute;
             width:360px;
+            opacity: 0;
+            animation: fadein 1s forwards;
+            animation-delay: .5s;
 
             @media(max-width: 1200px) {
                 position: static;
@@ -59,13 +68,23 @@ body {
             }
 
             img {
-                width: 300px;
+                width: 350px;
                 border: solid 4px #f0f0f0;
                 border-bottom: solid 80px #f0f0f0;
                 position: absolute;
-                transform: rotate(5deg);
+                transform: rotate(4deg);
                 right: calc(50% - 568px);
-                box-shadow: rgb(0, 0, 0) 0px 0px 50px 0px;
+                box-shadow: rgba(0, 0, 0, .5) 0px 0px 50px 0px;
+                filter: saturate(.55);
+                transition: all .25s ease-out;
+                border-radius: 4px;
+
+                &:hover {
+                    transform: rotate(2deg);
+                    filter: saturate(.85);
+                    box-shadow: rgba(0, 0, 0, .5) 0px 0px 10px 0px;
+                }
+
 
                 @media(max-width: 1200px) {
                     position: static;
@@ -85,9 +104,13 @@ body {
             display: flex;
             align-items: center;
             flex-flow: column;
+            opacity: 0;
+            animation: fadein 1s forwards;
+            animation-delay: .5s;
 
             .email {
                 font-family: "Comic Sans MS", "Chalkboard SE", "Ubuntu Mono", monospace;
+                filter: drop-shadow(0px 0px 8px #DE3940);
                 color: $primary-color1;
                 margin: 40px 0;
             }
@@ -99,13 +122,19 @@ body {
                     margin-right: 40px;
 
                     &:hover {
-                        svg path {
-                            fill: $primary-color1;
+                        svg {
+                            filter: drop-shadow(0px 0px 8px #DE3940);
+                            transition: all .2s ease-out;
                         }
                     }
 
                     &:last-of-type {
                         margin-right: 0;
+                    }
+
+                    svg {
+                        filter: drop-shadow(0px 0px 0px #DE3940);
+                        transition: all .2s ease-out;
                     }
                 }
             }
@@ -126,7 +155,7 @@ body {
         position: absolute;
 
         a {
-            color: rgba(#fff, .5);
+            color: rgba(#fff, .33);
         }
 
         @media(max-width: 1200px){
@@ -138,65 +167,11 @@ body {
     }
 }
 
-
-
-
-
-main {
-    animation: fadein .5s;
-}
-
-.logo {
-    opacity: 0;
-    animation: fadein 1s forwards;
-    animation-delay: .5s;
-}
-
 @keyframes fadein {
     from {opacity: 0;}
     to {opacity: 1;}
   }
 
-/* cyrillic-ext */
-@font-face {
-    font-family: 'Ubuntu Mono';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Ubuntu Mono'), local('UbuntuMono-Regular'), url(https://fonts.gstatic.com/s/ubuntumono/v8/KFOjCneDtsqEr0keqCMhbCc3CsTKlA.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-  }
-/* cyrillic */
-@font-face {
-font-family: 'Ubuntu Mono';
-font-style: normal;
-font-weight: 400;
-src: local('Ubuntu Mono'), local('UbuntuMono-Regular'), url(https://fonts.gstatic.com/s/ubuntumono/v8/KFOjCneDtsqEr0keqCMhbCc-CsTKlA.woff2) format('woff2');
-unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-font-family: 'Ubuntu Mono';
-font-style: normal;
-font-weight: 400;
-src: local('Ubuntu Mono'), local('UbuntuMono-Regular'), url(https://fonts.gstatic.com/s/ubuntumono/v8/KFOjCneDtsqEr0keqCMhbCc2CsTKlA.woff2) format('woff2');
-unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-font-family: 'Ubuntu Mono';
-font-style: normal;
-font-weight: 400;
-src: local('Ubuntu Mono'), local('UbuntuMono-Regular'), url(https://fonts.gstatic.com/s/ubuntumono/v8/KFOjCneDtsqEr0keqCMhbCc5CsTKlA.woff2) format('woff2');
-unicode-range: U+0370-03FF;
-}
-/* latin-ext */
-@font-face {
-font-family: 'Ubuntu Mono';
-font-style: normal;
-font-weight: 400;
-src: local('Ubuntu Mono'), local('UbuntuMono-Regular'), url(https://fonts.gstatic.com/s/ubuntumono/v8/KFOjCneDtsqEr0keqCMhbCc0CsTKlA.woff2) format('woff2');
-unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
 /* latin */
 @font-face {
 font-family: 'Ubuntu Mono';
